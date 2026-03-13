@@ -11,8 +11,26 @@ def home():
 
 @app.route('/prijzen')
 def prijzen():
-    return render_template("prijzen.html")
+    items = [
+        {"product":"vanillen-ijs 1 liter",
+         "prijs":"2 euro"
+         },
+        {"product":"chocolade-ijs 1 liter",
+         "prijs": "2 euro"
+         }
+    ]
+    return render_template("prijzen.html", items=items)
 
 @app.route('/recepten')
 def recepten():
-    return render_template("recepten.html")
+    items = [
+        {   
+            "recept": "Tiramisu di nona",
+            "img": "tiramisu.png"
+        },
+        {
+            "recept": "IJstaart met chocolade",
+            "img": "ijstaart.png"
+        } 
+    ]
+    return render_template("recepten.html", items=items)
