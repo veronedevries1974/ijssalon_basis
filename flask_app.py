@@ -5,14 +5,14 @@ app=Flask(__name__)
 if __name__=='_main_':
     app.run(port=5000,debug=True)
     
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template("home.html")
 
 @app.route('/prijzen')
 def prijzen():
     items = [
-        {"product":"vanillen-ijs 1 liter",
+        {"product":"vanille-ijs 1 liter",
          "prijs":"2 euro"
          },
         {"product":"chocolade-ijs 1 liter",
