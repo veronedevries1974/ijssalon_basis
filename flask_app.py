@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template
-    
+
+app=Flask(__name__)  
+
 @app.route('/home')
 def home():
     return render_template("home.html")
@@ -31,6 +33,5 @@ def recepten():
     ]
     return render_template("recepten.html", items=items)
 
-app=Flask(__name__)
 if __name__=='_main_':
     app.run(port=5000,debug=True)
