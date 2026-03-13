@@ -1,9 +1,5 @@
 from flask import Flask
 from flask import render_template
-
-app=Flask(__name__)
-if __name__=='_main_':
-    app.run(port=5000,debug=True)
     
 @app.route('/home')
 def home():
@@ -34,3 +30,7 @@ def recepten():
         } 
     ]
     return render_template("recepten.html", items=items)
+
+app=Flask(__name__)
+if __name__=='_main_':
+    app.run(port=5000,debug=True)
